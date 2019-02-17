@@ -13,7 +13,8 @@
     "lint": "eslint src/",
     "jest": "jest",
     "rollup": "rollup -c",
-    "test": "npm run jest -- --watch",
+    "test": "npm run jest",
+    "test:watch": "npm run jest -- --watch",
     "test:coverage": "npm run jest -- --coverage",
     "type-check": "tsc --noEmit"
   },

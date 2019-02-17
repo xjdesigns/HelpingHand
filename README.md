@@ -52,9 +52,14 @@ npm link helping_hand
 ## Testing
 Testing uses Jest and 100% coverage is required.
 
-Run tests in watch mode
+Run tests
 ```bash
 npm run test
+```
+
+Run tests in watch mode
+```bash
+npm run test:watch
 ```
 
 Run tests coverage report

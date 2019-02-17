@@ -16,6 +16,7 @@
     "test": "npm run jest",
     "test:watch": "npm run jest -- --watch",
     "test:coverage": "npm run jest -- --coverage",
+    "test:coveralls": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "babel-jest": "^24.1.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-standard": "^12.0.0",

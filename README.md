@@ -1,4 +1,5 @@
 # Helping Hand
+[![Coverage Status](https://coveralls.io/repos/github/xjdesigns/HelpingHand/badge.svg?branch=master)](https://coveralls.io/github/xjdesigns/HelpingHand?branch=master)
 
 Javascript utility library written in typescript.
 

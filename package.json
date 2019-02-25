@@ -5,6 +5,9 @@
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "build": "npm run build:types && npm run rollup",
     "build:prod": "npm run rollup -- --environment BUILD:production",

@@ -1,5 +1,5 @@
 export function addValueArray (arr: object[], value: object): object[] {
-  const newArr = []
+  const newArr: object[] = []
   const len = arr.length
   for (let i = 0; i < len; i++) {
     newArr.push(immutableObject(arr[i]))
@@ -28,9 +28,9 @@ export function recursiveCopy (arr: object[]): object[] {
   return newArr
 }
 
-export function loopArray (arr: object[]): object[] {
+export function loopArray (arr: any[]): any[] {
   const len: number = arr.length
-  let newArr = []
+  let newArr: any[] = []
   let newVal
 
   for (let i = 0; i < len; i++) {
@@ -50,7 +50,7 @@ export function loopArray (arr: object[]): object[] {
 }
 
 export function loopObject (obj: object): object {
-  let newObj = {}
+  let newObj: any = {}
 
   for (let key in obj) {
     if (Array.isArray(obj[key])) {

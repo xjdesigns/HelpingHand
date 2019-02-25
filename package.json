@@ -1,7 +1,7 @@
 {
   "name": "helping_hand",
   "description": "Javascript helper utilities for applications",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -20,7 +20,8 @@
     "test:watch": "npm run jest -- --watch",
     "test:coverage": "npm run jest -- --coverage",
     "test:coveralls": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",

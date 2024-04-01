@@ -1,5 +1,5 @@
-export function addValueArray (arr: object[], value: object): object[] {
-  const newArr: object[] = []
+export function addValueArray (arr: {}[], value: {}): {}[] {
+  const newArr: {}[] = []
   const len = arr.length
   for (let i = 0; i < len; i++) {
     newArr.push(immutableObject(arr[i]))
@@ -8,11 +8,11 @@ export function addValueArray (arr: object[], value: object): object[] {
   return newArr
 }
 
-export function immutableObject (obj: object): object {
+export function immutableObject (obj: {}): {} {
   return {...obj}
 }
 
-export function deepImmutable (arr: object[], objOnly: boolean): object[] {
+export function deepImmutable (arr: {}[], objOnly: boolean): {}[] {
   if (objOnly) {
     return JSON.parse(JSON.stringify(arr))
   } else {
@@ -21,8 +21,7 @@ export function deepImmutable (arr: object[], objOnly: boolean): object[] {
 }
 
 
-export function recursiveCopy (arr: object[]): object[] {
-  const len: number = arr.length
+export function recursiveCopy (arr: {}[]): {}[] {
   const newArr = loopArray(arr)
 
   return newArr
@@ -30,7 +29,7 @@ export function recursiveCopy (arr: object[]): object[] {
 
 export function loopArray (arr: any[]): any[] {
   const len: number = arr.length
-  let newArr: any[] = []
+  const newArr: any[] = []
   let newVal
 
   for (let i = 0; i < len; i++) {
@@ -49,7 +48,7 @@ export function loopArray (arr: any[]): any[] {
   return newArr
 }
 
-export function loopObject (obj: object): object {
+export function loopObject (obj: {}): {} {
   let newObj: any = {}
 
   for (let key in obj) {

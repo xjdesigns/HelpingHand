@@ -65,7 +65,7 @@ describe('searchDataByKeys()', () => {
     expect(res.length).toEqual(2)
   })
 
-  it('should return no data when key search is beyond 2 levels of dot notation', () => {
+  it('should return matches when allowed nesting is set to true', () => {
     const data = [{
       name: 'Jason',
       person: {
@@ -84,8 +84,25 @@ describe('searchDataByKeys()', () => {
       }
     }]
 
-    const res = searchDataByKeys(data, '4', ['person.date.month'])
-    expect(res.length).toEqual(0)
+    const res = searchDataByKeys(data, '5', ['person.date.month'], { allowNested: true })
+    expect(res.length).toEqual(1)
+  })
+
+  it('should return all when no search term passed', () => {
+    const data = [{
+      name: 'Jason',
+      person: {
+        age: '40'
+      }
+    }, {
+      name: 'Trevor',
+      person: {
+        age: '25'
+      }
+    }]
+
+    const res = searchDataByKeys(data, '', ['person.age'])
+    expect(res.length).toEqual(2)
   })
 
   it('should correctly return no values for no match', () => {

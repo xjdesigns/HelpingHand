@@ -30,21 +30,22 @@ export function searchDataByKeys (
 
         // if allowed search nested objects for values
         if (allowNested) {
-          if (s.length > 2) {
-            let t: string = '';
-            for (let ki = 0; ki < s.length; ki++) {
-              if (t) {
-                t = t[s[ki]]
-              } else {
-                t = d[s[ki]]
-              }
+          let t: string = '';
+          for (let ki = 0; ki < s.length; ki++) {
+            if (t) {
+              t = t[s[ki]]
+            } else {
+              t = d[s[ki]]
             }
-            term = t;
           }
+          term = t;
         } else {
           if (s.length <= 2) {
             if (d[s[0]] && d[s[0]][s[1]]) {
               term = term.concat(d[s[0]][s[1]]);
+            } else {
+              // eslint-disable-next-line no-console
+              console.warn('No match on search term');
             }
           } else {
             // eslint-disable-next-line no-console

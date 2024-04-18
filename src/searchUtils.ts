@@ -1,9 +1,24 @@
 // Search allows for one level of object dot notation search
 // Example key: ['hello.world']
-type Nested = {
+
+/**
+ * @category Search Utility
+ */
+export type Nested = {
   allowNested?: boolean
 }
 
+/**
+ * Search data by term and keys, allowing for full nested checks
+ *
+ * @defaultValue Default searchs one notation level deep unless option is true
+ *
+ * ```ts
+ * import { searchDataByKeys } from 'helping_hand'
+ * const data = searchDataByKeys(...);
+ * ```
+ * @category Search Utility
+ */
 export function searchDataByKeys (
   data: {}[] = [],
   searchTerm: string = '',

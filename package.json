@@ -21,7 +21,8 @@
     "test:coverage": "npm run jest -- --coverage",
     "test:coveralls": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls",
     "type-check": "tsc --noEmit",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "typedoc": "typedoc src/index.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -52,7 +53,7 @@
     "rollup-plugin-multi-entry": "^2.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-uglify": "^6.0.2",
+    "typedoc": "^0.25.13",
     "typescript": "^5.4.3"
-  },
-  "dependencies": {}
+  }
 }

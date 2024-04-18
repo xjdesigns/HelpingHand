@@ -4,6 +4,9 @@
 
 Javascript utility library written in typescript.
 
+# Documentation Site
+[Documentation Site](https://xjdesigns.github.io/HelpingHand/)
+
 ## Install
 ```bash
 npm i helping_hand

@@ -1,5 +1,5 @@
 # Helping Hand
-[![Build Status](https://travis-ci.org/xjdesigns/HelpingHand.svg?branch=master)](https://travis-ci.org/xjdesigns/HelpingHand)
+[![Node.js CI](https://github.com/xjdesigns/HelpingHand/actions/workflows/node.js.yml/badge.svg)](https://github.com/xjdesigns/HelpingHand/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/xjdesigns/HelpingHand/badge.svg?branch=master)](https://coveralls.io/github/xjdesigns/HelpingHand?branch=master)
 
 Javascript utility library written in typescript.

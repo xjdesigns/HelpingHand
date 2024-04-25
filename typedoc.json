@@ -2,5 +2,6 @@
   "navigation": {
     "includeCategories": true
   },
-  "version": true
+  "name": "Helping Hand",
+  "includeVersion": true
 }

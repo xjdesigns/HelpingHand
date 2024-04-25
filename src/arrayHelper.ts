@@ -77,8 +77,7 @@ export function loopArray (arr: any[]): any[] {
   let newVal
 
   for (let i = 0; i < len; i++) {
-
-    if (Array.isArray(arr[i])) {
+    if (isArray(arr[i])) {
       newVal = loopArray(arr[i])
       newArr.push(newVal)
     } else if (isObject(arr[i])) {
@@ -105,7 +104,7 @@ export function loopObject (obj: {}): {} {
   const newObj: any = {}
 
   for (const key in obj) {
-    if (Array.isArray(obj[key])) {
+    if (isArray(obj[key])) {
       newObj[key] = loopArray(obj[key])
     } else if (isObject(obj[key])) {
       newObj[key] = loopObject(obj[key])
@@ -115,6 +114,19 @@ export function loopObject (obj: {}): {} {
   }
 
   return newObj
+}
+
+/**
+ * Checks value for array type
+ *
+ * ```ts
+ * import { isArray } from 'helping_hand'
+ * const isTrue = isArray(...);
+ * ```
+ * @category Array Helper
+ */
+export function isArray (val: any): boolean {
+  return Array.isArray(val) && val !== null
 }
 
 /**

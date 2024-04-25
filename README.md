@@ -71,3 +71,8 @@ Run tests coverage report
 ```bash
 npm run test:coverage
 ```
+
+Create typedocs
+```bash
+npm run typedoc
+```

@@ -114,12 +114,3 @@ function _diffInnerCheck (int: IntType, update: UpdateType, diffVal: DiffType, k
     diffVal[key] = options?.convertNullToUndefined ? undefined : update
   }
 }
-
-interface LengthOfArg {
-  length: number;
-}
- 
-function logLength<Type extends LengthOfArg>(arg: Type): Type {
-  console.log(arg.length); 
-  return arg;
-}
